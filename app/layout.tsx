@@ -1,0 +1,6 @@
+import type {CSSProperties} from 'react';
+import {assetPath,siteUrl} from './paths';
+import type {Metadata} from 'next';
+import './globals.css';
+export const metadata:Metadata={metadataBase:new URL(siteUrl),title:'Chăm sóc da Quận 8 từ 250.000đ | Xile Beauty Spa',description:'Khám phá bảng giá chăm sóc da, peel và phục hồi chuyên sâu tại Xile Beauty Spa. 67 Hưng Phú, Quận 8. Tư vấn: 0909 722 408.',alternates:{canonical:siteUrl+'/'},icons:{icon:assetPath('/favicon.svg')},openGraph:{title:'Xile Beauty Spa — Chăm sóc da bằng sự kiên nhẫn',description:'Một làn da riêng Một lựa chọn dành cho bạn. Khám phá dịch vụ và bảng giá chăm sóc da tại Xile.',locale:'vi_VN',type:'website'}};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="vi"><head><script dangerouslySetInnerHTML={{__html:`(function(){if('scrollRestoration' in history)history.scrollRestoration='manual';function top(){if(location.hash)history.replaceState(history.state,'',location.pathname+location.search);window.scrollTo({top:0,left:0,behavior:'instant'});}top();window.addEventListener('pageshow',top);})();`}}/></head><body style={{'--skin-flow-image':`url("${assetPath("/skin-flow.webp")}")`} as CSSProperties}>{children}</body></html>}
